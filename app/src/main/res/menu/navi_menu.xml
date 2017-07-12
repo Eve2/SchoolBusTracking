@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+<group android:checkableBehavior="single">
+    <item android:id="@+id/home"
+        android:title="@string/navi_home"
+        android:icon="@drawable/home"/>
+    <item android:id="@+id/bus"
+        android:icon="@drawable/marker"
+        android:title="@string/navi_bus_location"/>
+    <item android:id="@+id/students"
+        android:icon="@drawable/users"
+        android:title="@string/navi_students_manifest"/>
+    <item android:id="@+id/notification"
+        android:icon="@drawable/comments"
+        android:title="@string/navi_notification"/>
+    <item android:id="@+id/setting"
+        android:title="@string/navi_setting"
+        android:icon="@drawable/setting"/>
+    <item android:title="@string/navi_help"
+        android:icon="@drawable/help"
+        android:id="@+id/help"/>
+
+    <item android:id="@+id/logout"
+        android:icon="@drawable/export"
+        android:title="@string/navi_logout"/>
+</group>
+
+</menu>
