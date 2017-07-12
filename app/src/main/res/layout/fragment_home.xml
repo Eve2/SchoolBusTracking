@@ -1,11 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="2"
+    android:rowCount="3">
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:text="one" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:text="one" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:text="one" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:text="one" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="default home fragment" />
-</LinearLayout>
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:text="one" />
+
+</GridLayout>
