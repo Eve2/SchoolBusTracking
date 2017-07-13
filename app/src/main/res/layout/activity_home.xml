@@ -33,7 +33,9 @@
             android:theme="@style/NavigationDrawerStyle"
             app:itemIconTint="@color/colorAccent"
             app:itemTextColor="@color/primaryText"
-            app:menu="@menu/navi_menu">
+            app:menu="@menu/navi_menu"
+            android:fitsSystemWindows="true"
+            app:insetForeground="@color/primaryText">
 
         </android.support.design.widget.NavigationView>
     </android.support.v4.widget.DrawerLayout>
