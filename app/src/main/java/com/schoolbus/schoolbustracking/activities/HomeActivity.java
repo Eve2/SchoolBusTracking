@@ -1,5 +1,6 @@
 package com.schoolbus.schoolbustracking.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -9,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import com.schoolbus.schoolbustracking.R;
+import com.schoolbus.schoolbustracking.fragments.home.HomeFragment;
+import com.schoolbus.schoolbustracking.fragments.home.StudentsFragment;
 
 public class HomeActivity extends AppCompatActivity {
     private Toolbar toolbar;
@@ -24,9 +27,12 @@ public class HomeActivity extends AppCompatActivity {
         setActionBar();
         setDrawerToggle();
         setListener();
-        if (findViewById(R.id.container)!=null)
-        {
-           // getSupportFragmentManager().beginTransaction().add(R.id.container,).addToBackStack(null).commit();
+
+        // home page container to holder all fragments
+        if (findViewById(R.id.home_container) != null) {
+            if (savedInstanceState == null) {
+                getSupportFragmentManager().beginTransaction().add(R.id.home_container, new HomeFragment()).commit();
+            }
         }
     }
     //init view
@@ -58,16 +64,18 @@ public class HomeActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.home:
-                      //  getSupportFragmentManager().beginTransaction().replace(R.id.home_container, new MyShiftsFragmentHost()).addToBackStack(null).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.home_container, new HomeFragment()).addToBackStack(null).commit();
                         break;
                     case R.id.students:
-                       // getSupportFragmentManager().beginTransaction().replace(R.id.home_container, new Map()).addToBackStack(null).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.home_container, new StudentsFragment()).addToBackStack(null).commit();
                         break;
                     case R.id.notification:
                         break;
                     case R.id.logout:
+                        Intent it = new Intent(HomeActivity.this, LoginActivity.class);
+        //                sharedPreferences.edit().clear().commit();
+                        startActivity(it);
                         break;
-
                 }
                 mDrawerLayout.closeDrawer(GravityCompat.START);
                 return true;
