@@ -31,4 +31,6 @@ dependencies {
     compile 'de.hdodenhof:circleimageview:2.1.0'
     compile 'eu.the4thfloor.volley:com.android.volley:2015.05.28'
     compile 'it.sephiroth.android.library.picasso:picasso:2.5.2.4b'
+    compile 'com.google.android.gms:play-services-maps:11.0.2'
+    compile 'com.google.android.gms:play-services-location:11.0.2'
 }

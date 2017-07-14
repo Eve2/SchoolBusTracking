@@ -12,7 +12,7 @@
         android:id="@+id/group2"
         android:checkableBehavior="single">
         <item
-            android:id="@+id/bus"
+            android:id="@+id/location"
             android:icon="@drawable/marker"
             android:title="@string/navi_bus_location" />
     </group>
