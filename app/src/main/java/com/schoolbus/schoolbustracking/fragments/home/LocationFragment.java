@@ -13,6 +13,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.Circle;
 import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
@@ -53,7 +54,7 @@ public class LocationFragment extends Fragment implements OnMapReadyCallback {
         googleMap.addMarker(new MarkerOptions().position(start)
                 .title("Start Stop")) ;
         googleMap.addMarker(new MarkerOptions().position(end)
-                .title("End Stop")) ;
+                .title("End Stop")).setIcon(BitmapDescriptorFactory.fromResource(R.drawable.bus_24)); ;
         googleMap.addMarker(new MarkerOptions().position(CityBank)
                 .title("City Bank Stop")) ;
         googleMap.addMarker(new MarkerOptions().position(Lara)
@@ -76,7 +77,7 @@ public class LocationFragment extends Fragment implements OnMapReadyCallback {
                 .fillColor(Color.parseColor("#BBDEFB")));
         CameraUpdate center =
                 CameraUpdateFactory.newLatLng(start);
-        CameraUpdate zoom = CameraUpdateFactory.zoomTo(14);
+        CameraUpdate zoom = CameraUpdateFactory.zoomTo(13);
         googleMap.moveCamera(center);
         googleMap.animateCamera(zoom);
     }

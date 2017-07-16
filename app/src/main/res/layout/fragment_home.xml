@@ -20,17 +20,16 @@
         android:gravity="center"
         >
 
-        <Button
-            android:layout_height="wrap_content"
+        <ImageView
             android:layout_width="wrap_content"
-            android:id="@+id/button1"
-            android:text="Button" />
+            android:layout_height="wrap_content"
+            android:src="@drawable/bus_96"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="Map"
+            android:text="Bus Location"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -48,11 +47,10 @@
         android:layout_columnWeight="1"
         >
 
-        <Button
-            android:layout_height="wrap_content"
+        <ImageView
             android:layout_width="wrap_content"
-            android:id="@+id/button2"
-            android:text="Button" />
+            android:layout_height="wrap_content"
+            android:src="@drawable/students"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -77,11 +75,10 @@
         android:layout_columnWeight="1"
         >
 
-        <Button
-            android:layout_height="wrap_content"
+        <ImageView
             android:layout_width="wrap_content"
-            android:id="@+id/button3"
-            android:text="Button" />
+            android:layout_height="wrap_content"
+            android:src="@drawable/notification"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -106,11 +103,11 @@
         android:layout_columnWeight="1"
         >
 
-        <Button
-            android:layout_height="wrap_content"
+
+        <ImageView
             android:layout_width="wrap_content"
-            android:id="@+id/button4"
-            android:text="Button" />
+            android:layout_height="wrap_content"
+            android:src="@drawable/gear"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -135,11 +132,11 @@
         android:layout_height="wrap_content"
         >
 
-        <Button
-            android:layout_height="wrap_content"
+
+        <ImageView
             android:layout_width="wrap_content"
-            android:id="@+id/button5"
-            android:text="Button" />
+            android:layout_height="wrap_content"
+            android:src="@drawable/question"/>
 
         <TextView
             android:layout_width="wrap_content"
