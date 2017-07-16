@@ -10,5 +10,9 @@
     <string name="open">open</string>
     <string name="close">close</string>
     <string name="google_api_key">AIzaSyA0wq3APzfaU_oC90VhbEMBMZyN_rU98Ms</string>
+    <string name="login_text">School Bus Tracking</string>
+    <string name="login_phone">Phone number</string>
+    <string name="login_password">Your password</string>
+    <string name="sigup_register">Register</string>
 
 </resources>

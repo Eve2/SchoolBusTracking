@@ -1,70 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:background="@color/primaryText"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/primaryText"
+    android:orientation="vertical">
 
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/logo" />
 
     <EditText
         android:id="@+id/name"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/divider"
         android:ems="10"
+        android:hint="Name"
         android:inputType="textPersonName"
-        android:hint="Name" />
+        android:paddingLeft="5dp" />
 
     <EditText
+        android:paddingLeft="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:id="@+id/password"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:background="@color/divider"
         android:ems="10"
-        android:inputType="textPassword"
-        android:hint="Password" />
+        android:hint="Password"
+        android:inputType="textPassword" />
 
     <EditText
+        android:paddingLeft="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:id="@+id/mobile"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:background="@color/divider"
         android:ems="10"
-        android:inputType="phone"
-        android:hint="Mobile" />
+        android:hint="Mobile"
+        android:inputType="phone" />
 
     <EditText
+        android:paddingLeft="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:id="@+id/father_name"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:background="@color/divider"
         android:ems="10"
+        android:hint="Parents Name"
         android:inputType="textPersonName"
-        android:hint="Father Name" />
+        tools:ignore="HardcodedText" />
 
     <EditText
+        android:paddingLeft="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:id="@+id/driver_license"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:background="@color/divider"
         android:ems="10"
-        android:inputType="text"
-        android:hint="Driver License" />
+        android:hint="Driver License"
+        android:inputType="text" />
 
     <EditText
+        android:paddingLeft="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:id="@+id/address"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:background="@color/divider"
         android:ems="10"
-        android:inputType="textPostalAddress"
-        android:hint="Address" />
+        android:hint="Address"
+        android:inputType="textPostalAddress" />
 
     <EditText
+        android:paddingLeft="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:id="@+id/gender"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:background="@color/divider"
         android:ems="10"
-        android:inputType="text"
-        android:hint="Gender" />
+        android:hint="Gender"
+        android:inputType="text" />
 
     <Button
+        android:layout_marginTop="20dp"
         android:id="@+id/toLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Register" />
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/sigup_register"
+        android:textColor="@color/primaryText" />
 </LinearLayout>
