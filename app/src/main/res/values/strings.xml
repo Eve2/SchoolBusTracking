@@ -9,10 +9,21 @@
     <string name="navi_bus_location">Location</string>
     <string name="open">open</string>
     <string name="close">close</string>
-    <string name="google_api_key">AIzaSyA0wq3APzfaU_oC90VhbEMBMZyN_rU98Ms</string>
+    <!--string name="google_api_key">AIzaSyA0wq3APzfaU_oC90VhbEMBMZyN_rU98Ms</string-->
     <string name="login_text">School Bus Tracking</string>
     <string name="login_phone">Phone number</string>
     <string name="login_password">Your password</string>
     <string name="sigup_register">Register</string>
+    <string name="google_api_key_map">AIzaSyA0wq3APzfaU_oC90VhbEMBMZyN_rU98Ms</string>
+
+
+    <string name="subscribe_to_notification">Subscribe to notification</string>
+    <string name="log_token">Log Token</string>
+    <string name="msg_subscribed">Subscribed to notification</string>
+    <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="default_notification_channel_name" translatable="true">Notification</string>
+    <string name="send_notification">send notification</string>
+
 
 </resources>

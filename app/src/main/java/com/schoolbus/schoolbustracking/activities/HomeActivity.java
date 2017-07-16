@@ -13,6 +13,7 @@ import com.schoolbus.schoolbustracking.R;
 import com.schoolbus.schoolbustracking.fragments.home.HomeFragment;
 import com.schoolbus.schoolbustracking.fragments.home.LocationFragment;
 import com.schoolbus.schoolbustracking.fragments.home.StudentsFragment;
+import com.schoolbus.schoolbustracking.fragments.notification.NotificationFragment;
 
 public class HomeActivity extends AppCompatActivity {
     private Toolbar toolbar;
@@ -32,7 +33,7 @@ public class HomeActivity extends AppCompatActivity {
         // home page container to holder all fragments
         if (findViewById(R.id.home_container) != null) {
             if (savedInstanceState == null) {
-                getSupportFragmentManager().beginTransaction().add(R.id.home_container, new LocationFragment()).commit();
+                getSupportFragmentManager().beginTransaction().add(R.id.home_container, new HomeFragment()).commit();
             }
         }
     }
@@ -71,6 +72,7 @@ public class HomeActivity extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction().replace(R.id.home_container, new StudentsFragment()).addToBackStack(null).commit();
                         break;
                     case R.id.notification:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.home_container, new NotificationFragment()).addToBackStack(null).commit();
                         break;
                     case R.id.location:
                         getSupportFragmentManager().beginTransaction().replace(R.id.home_container,new LocationFragment()).addToBackStack(null).commit();

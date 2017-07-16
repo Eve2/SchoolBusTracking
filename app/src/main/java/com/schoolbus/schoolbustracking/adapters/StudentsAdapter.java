@@ -47,8 +47,7 @@ public class StudentsAdapter extends RecyclerView.Adapter<StudentsAdapter.ViewHo
         holder.studentID.setText(mInfo.getStudentID());
         holder.studentName.setText(mInfo.getStudentName());
 
-        //TODO: problem with pics showing  Aamir
-//        Picasso.with(context).load(mInfo.getStudentPhoto()).into(holder.studentPhoto);
+        Picasso.with(context).load(mInfo.getStudentPhoto()).into(holder.studentPhoto);
     }
 
     @Override
@@ -65,7 +64,7 @@ public class StudentsAdapter extends RecyclerView.Adapter<StudentsAdapter.ViewHo
 
             studentName = (TextView) itemView.findViewById(R.id.studentName);
             studentID = (TextView) itemView.findViewById(R.id.studentID);
-     //       studentPhoto = (ImageView) itemView.findViewById(R.id.studentPhoto);
+            studentPhoto = (ImageView) itemView.findViewById(R.id.studentPhoto);
         }
     }
 
