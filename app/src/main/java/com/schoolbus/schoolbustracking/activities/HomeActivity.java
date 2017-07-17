@@ -1,5 +1,6 @@
 package com.schoolbus.schoolbustracking.activities;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -78,7 +79,7 @@ public class HomeActivity extends AppCompatActivity {
                         break;
                     case R.id.logout:
                         Intent it = new Intent(HomeActivity.this, LoginActivity.class);
-        //                sharedPreferences.edit().clear().commit();
+                        getApplicationContext().getSharedPreferences("BusSharedPreference", Context.MODE_PRIVATE).edit().clear().commit();
                         startActivity(it);
                         break;
                 }
