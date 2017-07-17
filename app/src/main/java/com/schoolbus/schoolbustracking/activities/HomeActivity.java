@@ -13,7 +13,7 @@ import com.schoolbus.schoolbustracking.R;
 import com.schoolbus.schoolbustracking.fragments.home.HomeFragment;
 import com.schoolbus.schoolbustracking.fragments.home.LocationFragment;
 import com.schoolbus.schoolbustracking.fragments.home.StudentsFragment;
-import com.schoolbus.schoolbustracking.fragments.notification.NotificationFragment;
+import com.schoolbus.schoolbustracking.fragments.home.NotificationFragment;
 
 public class HomeActivity extends AppCompatActivity {
     private Toolbar toolbar;

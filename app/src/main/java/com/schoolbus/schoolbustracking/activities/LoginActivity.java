@@ -1,6 +1,5 @@
 package com.schoolbus.schoolbustracking.activities;
 
-import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -8,7 +7,6 @@ import com.schoolbus.schoolbustracking.R;
 import com.schoolbus.schoolbustracking.fragments.login.LoginDefaultFragment;
 
 public class LoginActivity extends AppCompatActivity {
-    private static FragmentManager fragmentManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -10,110 +10,126 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="15dp"
+        android:layout_margin="20dp"
         android:src="@drawable/logo" />
 
     <EditText
         android:id="@+id/name"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:background="@color/divider"
         android:ems="10"
+        android:fontFamily="monospace"
         android:hint="Name"
         android:inputType="textPersonName"
-        android:paddingLeft="5dp" />
+        android:paddingLeft="5dp"
+        android:textStyle="bold" />
 
     <EditText
-        android:paddingLeft="5dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:id="@+id/password"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@color/divider"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword" />
-
-    <EditText
-        android:paddingLeft="5dp"
+        android:layout_height="30dp"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:background="@color/divider"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="5dp"
+        android:textStyle="bold" />
+
+    <EditText
         android:id="@+id/mobile"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@color/divider"
-        android:ems="10"
-        android:hint="Mobile"
-        android:inputType="phone" />
-
-    <EditText
-        android:paddingLeft="5dp"
+        android:layout_height="30dp"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:id="@+id/father_name"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
         android:background="@color/divider"
         android:ems="10"
+        android:fontFamily="monospace"
+        android:hint="Mobile"
+        android:inputType="phone"
+        android:paddingLeft="5dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/father_name"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/divider"
+        android:ems="10"
+        android:fontFamily="monospace"
         android:hint="Parents Name"
         android:inputType="textPersonName"
+        android:paddingLeft="5dp"
+        android:textStyle="bold"
         tools:ignore="HardcodedText" />
 
     <EditText
-        android:paddingLeft="5dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:id="@+id/driver_license"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@color/divider"
-        android:ems="10"
-        android:hint="Driver License"
-        android:inputType="text" />
-
-    <EditText
-        android:paddingLeft="5dp"
+        android:layout_height="30dp"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:background="@color/divider"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:hint="Driver License"
+        android:inputType="text"
+        android:paddingLeft="5dp"
+        android:textStyle="bold" />
+
+    <EditText
         android:id="@+id/address"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@color/divider"
-        android:ems="10"
-        android:hint="Address"
-        android:inputType="textPostalAddress" />
-
-    <EditText
-        android:paddingLeft="5dp"
+        android:layout_height="30dp"
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:id="@+id/gender"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
         android:background="@color/divider"
         android:ems="10"
-        android:hint="Gender"
-        android:inputType="text" />
+        android:fontFamily="monospace"
+        android:hint="Address"
+        android:inputType="textPostalAddress"
+        android:paddingLeft="5dp"
+        android:textStyle="bold" />
 
-    <Button
-        android:layout_marginTop="20dp"
-        android:id="@+id/toLogin"
+    <EditText
+        android:id="@+id/gender"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:background="@color/divider"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:hint="Gender"
+        android:inputType="text"
+        android:paddingLeft="5dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/toLogin"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp"
         android:background="@color/colorPrimary"
+        android:fontFamily="monospace"
         android:text="@string/sigup_register"
-        android:textColor="@color/primaryText" />
+        android:textColor="@color/primaryText"
+        android:textStyle="bold" />
 </LinearLayout>

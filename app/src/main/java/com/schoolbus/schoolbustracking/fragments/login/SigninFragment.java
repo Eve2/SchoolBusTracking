@@ -9,7 +9,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.schoolbus.schoolbustracking.R;
 import com.schoolbus.schoolbustracking.activities.HomeActivity;
 
@@ -21,27 +29,68 @@ public class SigninFragment extends Fragment {
 
     ViewGroup viewGroup;
     FragmentManager fragmentManager;
-    FragmentTransaction fragmentTransaction;
+    String phone, password;
     Button toHome;
+    StringBuilder stringBuilder;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         viewGroup = (ViewGroup) inflater.inflate(R.layout.fragment_signin, container, false);
 
         fragmentManager = getFragmentManager();
         toHome = viewGroup.findViewById(R.id.toHome);
+        stringBuilder = new StringBuilder("http://rjtmobile.com/aamir/school-mgt/school_bus_driver_app/driver_login.php?&driver_password=");
 
         toHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                jumpToHome();
+                if (verified()) {
+                    tryLogin();
+                } else {
+                    Toast.makeText(getActivity(), "Please fill all the information", Toast.LENGTH_LONG).show();
+                }
             }
         });
 
         return viewGroup;
     }
 
-    public void jumpToHome() {
+    private boolean verified() {
+
+        phone = ((EditText)viewGroup.findViewById(R.id.login_phone)).getText().toString().trim();
+        password = ((EditText)viewGroup.findViewById(R.id.login_password)).getText().toString().trim();
+
+        if (phone == null || phone.length() == 0 || password == null || password.length() == 0) {
+            return false;
+        } else {
+            stringBuilder.append(password + "&driver_mobile=" + phone);
+            return true;
+        }
+    }
+
+    private void tryLogin() {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, stringBuilder.toString(), new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                if(response.contains("success")) {
+                    jumpToHome();
+                } else {
+                    Toast.makeText(getActivity(), "Phone and password not match", Toast.LENGTH_LONG).show();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();
+            }
+        });
+
+        RequestQueue requestQueue = Volley.newRequestQueue(getContext());
+        requestQueue.add(stringRequest);
+    }
+
+    private void jumpToHome() {
         Intent i = new Intent(getActivity(), HomeActivity.class);
+        Toast.makeText(getActivity(), "Welcome to School Bus Tracking!", Toast.LENGTH_LONG).show();
         startActivity(i);
     }
 }

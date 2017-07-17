@@ -50,7 +50,6 @@ public class StudentsFragment extends Fragment {
         mRecyclerView.setHasFixedSize(true);
 
         studentsInfos = new ArrayList<>();
-
         fetchStudents();
 
         return view;

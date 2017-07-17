@@ -1,4 +1,4 @@
-package com.schoolbus.schoolbustracking.fragments.notification;
+package com.schoolbus.schoolbustracking.fragments.home;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;

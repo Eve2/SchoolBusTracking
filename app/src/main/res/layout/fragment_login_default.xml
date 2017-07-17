@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/colorPrimary"
+    android:background="@color/colorPrimaryLight"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -15,41 +15,51 @@
         android:layout_height="150dp"
         app:srcCompat="@color/colorAccent"
         android:layout_marginTop="100dp"
-        android:src="@drawable/logo"/>
+        android:src="@drawable/logofull"/>
 
     <Button
-        android:layout_gravity="center_horizontal"
         android:id="@+id/toLogin"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:background="@color/primaryText"
         android:text="Login"
-
-        android:background="@color/colorAccent"
-        android:textColor="@color/colorPrimary"/>
+        android:textColor="@color/colorPrimaryLight"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
     <Button
-        android:layout_gravity="center_horizontal"
         android:id="@+id/toSignup"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
+        android:background="@color/primaryText"
         android:text="Sign Up"
-        android:background="@color/colorAccent"
-        android:textColor="@color/colorPrimary"/>
+        android:textColor="@color/colorPrimaryLight"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
     <TextView
-        android:layout_gravity="center_horizontal"
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="8dp"
-        android:text="Powered by Alan &amp; Yu \n         Version 1.0 "
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:text="Powered by: Alan &amp; Yu®"
+        android:textAlignment="center"
         android:textColor="@android:color/black"
-       />
+        android:textSize="18sp"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_gravity="center"
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Version 1.0 "
+        android:textColor="@android:color/black"
+        />
+
 </LinearLayout>

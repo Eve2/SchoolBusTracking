@@ -19,10 +19,7 @@ public class LoginDefaultFragment extends Fragment {
 
     ViewGroup viewGroup;
     Button toLogin, toSignup;
-
     FragmentManager fragmentManager;
-    FragmentTransaction fragmentTransaction;
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -46,27 +43,19 @@ public class LoginDefaultFragment extends Fragment {
             }
         });
 
-
         return viewGroup;
     }
 
     public void jumpToLogin() {
 
         SigninFragment signinFragment = new SigninFragment();
-        fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.login_container, signinFragment).addToBackStack(null).commit();
+        fragmentManager.beginTransaction().replace(R.id.login_container, signinFragment).addToBackStack(null).commit();
     }
 
     public void jumpToSignup() {
 
         SignupFragment signupFragment = new SignupFragment();
-        fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.login_container, signupFragment).addToBackStack(null).commit();
+        fragmentManager.beginTransaction().replace(R.id.login_container, signupFragment).addToBackStack(null).commit();
     }
-
-
-
-
-
 
 }

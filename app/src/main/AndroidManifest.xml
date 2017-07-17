@@ -27,7 +27,7 @@
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/colorAccent" />
 
-        <activity android:name=".activities.HomeActivity" >
+        <activity android:name=".activities.SplashActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -35,7 +35,7 @@
         </activity>
 
         <activity android:name=".activities.LoginActivity" />
-        <activity android:name=".activities.SplashActivity"/>
+        <activity android:name=".activities.HomeActivity"/>
 
         <service
             android:name=".services.MyFirebaseMessagingService">
