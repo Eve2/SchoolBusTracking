@@ -6,9 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 
 import com.schoolbus.schoolbustracking.R;
+import com.schoolbus.schoolbustracking.fragments.HelpFragment;
+import com.schoolbus.schoolbustracking.fragments.SettingFragment;
 
 /**
  * Created by Eve on 7/12/17.
@@ -53,14 +54,14 @@ public class HomeFragment extends Fragment {
         linearLayout4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.home_container,new SettingFragment()).addToBackStack(null).commit();
             }
         });
 
         linearLayout5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.home_container,new HelpFragment()).addToBackStack(null).commit();
             }
         });
 

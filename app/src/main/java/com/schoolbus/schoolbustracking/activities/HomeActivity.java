@@ -11,6 +11,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import com.schoolbus.schoolbustracking.R;
+import com.schoolbus.schoolbustracking.fragments.HelpFragment;
+import com.schoolbus.schoolbustracking.fragments.SettingFragment;
 import com.schoolbus.schoolbustracking.fragments.home.HomeFragment;
 import com.schoolbus.schoolbustracking.fragments.home.LocationFragment;
 import com.schoolbus.schoolbustracking.fragments.home.StudentsFragment;
@@ -77,11 +79,18 @@ public class HomeActivity extends AppCompatActivity {
                     case R.id.location:
                         getSupportFragmentManager().beginTransaction().replace(R.id.home_container,new LocationFragment()).addToBackStack(null).commit();
                         break;
+                    case R.id.help:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.home_container,new HelpFragment()).addToBackStack(null).commit();
+                        break;
                     case R.id.logout:
                         Intent it = new Intent(HomeActivity.this, LoginActivity.class);
                         getApplicationContext().getSharedPreferences("BusSharedPreference", Context.MODE_PRIVATE).edit().clear().commit();
                         startActivity(it);
                         break;
+                    case  R.id.setting:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.home_container,new SettingFragment()).addToBackStack(null).commit();
+                        break;
+
                 }
                 mDrawerLayout.closeDrawer(GravityCompat.START);
                 return true;

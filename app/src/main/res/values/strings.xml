@@ -15,7 +15,13 @@
     <string name="login_password">Password</string>
     <string name="sigup_register">Register</string>
     <string name="google_api_key_map">AIzaSyA0wq3APzfaU_oC90VhbEMBMZyN_rU98Ms</string>
-
+    <string-array name="setting">
+        <item>Contacts</item>
+        <item>Change Profile</item>
+        <item>Change Password</item>
+        <item>Change Language</item>
+        <item>Delete Account</item>
+    </string-array>
 
     <string name="subscribe_to_notification">Subscribe for notification</string>
     <string name="log_token">Log Token</string>
