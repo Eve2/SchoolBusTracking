@@ -1,6 +1,8 @@
 package com.schoolbus.schoolbustracking.fragments.login;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -32,6 +34,8 @@ public class SigninFragment extends Fragment {
     String phone, password;
     Button toHome;
     StringBuilder stringBuilder;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         viewGroup = (ViewGroup) inflater.inflate(R.layout.fragment_signin, container, false);
@@ -39,6 +43,8 @@ public class SigninFragment extends Fragment {
         fragmentManager = getFragmentManager();
         toHome = viewGroup.findViewById(R.id.toHome);
         stringBuilder = new StringBuilder("http://rjtmobile.com/aamir/school-mgt/school_bus_driver_app/driver_login.php?&driver_password=");
+        sharedPreferences = getContext().getSharedPreferences("BusSharedPreference", Context.MODE_PRIVATE);
+        editor = sharedPreferences.edit();
 
         toHome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,6 +96,8 @@ public class SigninFragment extends Fragment {
 
     private void jumpToHome() {
         Intent i = new Intent(getActivity(), HomeActivity.class);
+        editor.putString("Phone", phone);
+        editor.commit();
         Toast.makeText(getActivity(), "Welcome to School Bus Tracking!", Toast.LENGTH_LONG).show();
         startActivity(i);
     }

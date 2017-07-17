@@ -28,7 +28,7 @@ public class NotificationFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         viewGroup = (ViewGroup) inflater.inflate(R.layout.fragment_notification, container, false);
         subscribeButton = (Button) viewGroup.findViewById(R.id.subscribeButton);
-        logTokenButton = (Button) viewGroup.findViewById(R.id.logTokenButton);
+//        logTokenButton = (Button) viewGroup.findViewById(R.id.logTokenButton);
         notificationButton = (Button) viewGroup.findViewById(R.id.notificationButton);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -57,7 +57,7 @@ public class NotificationFragment extends Fragment{
                 Toast.makeText(getActivity(), msg, Toast.LENGTH_SHORT).show();
             }
         });
-
+/*
         logTokenButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,12 +68,12 @@ public class NotificationFragment extends Fragment{
                 Toast.makeText(getActivity(), msg, Toast.LENGTH_SHORT).show();
             }
         });
-
+*/
         notificationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 // todo: add getinstance send message
-                Toast.makeText(getActivity(), "Notification Sent", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Notification Sent Success!", Toast.LENGTH_SHORT).show();
             }
         });
 

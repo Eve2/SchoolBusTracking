@@ -19,7 +19,7 @@
 
     <string name="subscribe_to_notification">Subscribe for notification</string>
     <string name="log_token">Log Token</string>
-    <string name="msg_subscribed">Subscribed to notification</string>
+    <string name="msg_subscribed">Subscribed succeed!</string>
     <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
     <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
     <string name="default_notification_channel_name" translatable="true">Notification</string>

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.schoolbus.schoolbustracking.R;
 
@@ -17,23 +18,20 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        sharedPreferences = getBaseContext().getSharedPreferences("mSharedPref", Context.MODE_PRIVATE);
+        sharedPreferences = getBaseContext().getSharedPreferences("BusSharedPreference", Context.MODE_PRIVATE);
 
         Thread timerThread = new Thread() {
             public void run() {
                 try {
                     sleep(5000);
-                    /*
-                    if (sharedPreferences.getString("OTP", "").equals("")) {
-                        Intent intent = new Intent(SplashPage.this, LoginPage.class);
+
+                    if (sharedPreferences.getString("Phone", "").equals("")) {
+                        Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
                         startActivity(intent);
                     } else {
-                        Intent intent = new Intent(SplashPage.this, HomePage.class);
+                        Intent intent = new Intent(SplashActivity.this, HomeActivity.class);
                         startActivity(intent);
                     }
-                    */
-                    Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
-                    startActivity(intent);
 
                 } catch (InterruptedException e) {
                     e.printStackTrace();

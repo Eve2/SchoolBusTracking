@@ -13,32 +13,36 @@
         android:src="@drawable/comments"
         android:contentDescription="" />
 
-    <Button
+    <info.hoang8f.widget.FButton
         android:id="@+id/subscribeButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_margin="30dp"
         android:background="@color/colorPrimary"
-        android:text="@string/subscribe_to_notification" />
+        android:backgroundTint="@color/colorPrimary"
+        android:text="@string/subscribe_to_notification"
+        android:textStyle="bold" />
 
-    <Button
+    <info.hoang8f.widget.FButton
         android:id="@+id/notificationButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
         android:layout_gravity="center_horizontal"
         android:layout_margin="30dp"
-        android:text="@string/send_notification" />
+        android:background="@color/colorPrimary"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="@string/send_notification"
+        android:textStyle="bold" />
 
-    <Button
+    <!--Button
         android:id="@+id/logTokenButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
         android:background="@color/colorPrimary"
         android:layout_gravity="center_horizontal"
-        android:text="@string/log_token" />
+        android:text="@string/log_token" /-->
 
 
 </LinearLayout>

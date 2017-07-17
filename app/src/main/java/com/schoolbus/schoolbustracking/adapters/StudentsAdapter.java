@@ -42,7 +42,7 @@ public class StudentsAdapter extends RecyclerView.Adapter<StudentsAdapter.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(final StudentsAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(final StudentsAdapter.ViewHolder holder, final int position) {
 
         final StudentsInfo mInfo = studentsInfos.get(position);
 

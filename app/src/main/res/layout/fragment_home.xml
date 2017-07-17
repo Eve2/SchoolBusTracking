@@ -14,9 +14,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/ll1"
-        android:layout_margin="20dp"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
+        android:layout_margin="25dp"
+        android:layout_marginLeft="50dp"
         android:gravity="center"
         >
 
@@ -42,9 +41,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:id="@+id/ll2"
-        android:layout_margin="20dp"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
+        android:layout_margin="25dp"
         >
 
         <ImageView
@@ -70,9 +67,8 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:id="@+id/ll3"
-        android:layout_margin="20dp"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
+        android:layout_marginLeft="50dp"
+        android:layout_margin="25dp"
         >
 
         <ImageView
@@ -98,9 +94,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:id="@+id/ll4"
-        android:layout_margin="20dp"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
+        android:layout_margin="25dp"
         >
 
 
@@ -124,10 +118,9 @@
     <LinearLayout
         android:orientation="vertical"
         android:id="@+id/ll5"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
         android:gravity="center"
-        android:layout_margin="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_margin="25dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         >

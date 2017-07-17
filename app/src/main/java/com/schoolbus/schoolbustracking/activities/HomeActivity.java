@@ -30,7 +30,6 @@ public class HomeActivity extends AppCompatActivity {
         setDrawerToggle();
         setListener();
 
-        // home page container to holder all fragments
         if (findViewById(R.id.home_container) != null) {
             if (savedInstanceState == null) {
                 getSupportFragmentManager().beginTransaction().add(R.id.home_container, new HomeFragment()).commit();
