@@ -22,7 +22,7 @@ public class SplashActivity extends AppCompatActivity {
         Thread timerThread = new Thread() {
             public void run() {
                 try {
-                    sleep(500);
+                    sleep(5000);
                     /*
                     if (sharedPreferences.getString("OTP", "").equals("")) {
                         Intent intent = new Intent(SplashPage.this, LoginPage.class);
