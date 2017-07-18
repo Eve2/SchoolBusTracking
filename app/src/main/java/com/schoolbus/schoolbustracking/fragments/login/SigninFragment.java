@@ -36,6 +36,7 @@ public class SigninFragment extends Fragment {
     StringBuilder stringBuilder;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
+    int testNum = 0;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         viewGroup = (ViewGroup) inflater.inflate(R.layout.fragment_signin, container, false);
@@ -57,10 +58,11 @@ public class SigninFragment extends Fragment {
             }
         });
 
+        setTestNum(100);
         return viewGroup;
     }
 
-    private boolean verified() {
+    public boolean verified() {
 
         phone = ((EditText)viewGroup.findViewById(R.id.login_phone)).getText().toString().trim();
         password = ((EditText)viewGroup.findViewById(R.id.login_password)).getText().toString().trim();
@@ -73,7 +75,7 @@ public class SigninFragment extends Fragment {
         }
     }
 
-    private void tryLogin() {
+    public int tryLogin() {
         StringRequest stringRequest = new StringRequest(Request.Method.POST, stringBuilder.toString(), new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -92,13 +94,23 @@ public class SigninFragment extends Fragment {
 
         RequestQueue requestQueue = Volley.newRequestQueue(getContext());
         requestQueue.add(stringRequest);
+        return 1;
     }
 
-    private void jumpToHome() {
+    public int jumpToHome() {
         Intent i = new Intent(getActivity(), HomeActivity.class);
         editor.putString("Phone", phone);
         editor.commit();
         Toast.makeText(getActivity(), "Welcome to School Bus Tracking!", Toast.LENGTH_LONG).show();
         startActivity(i);
+        return 1;
+    }
+
+    public void setTestNum(int i) {
+        this.testNum = i;
+    }
+
+    public int getTestNum() {
+        return testNum;
     }
 }

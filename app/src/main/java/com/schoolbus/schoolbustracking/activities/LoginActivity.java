@@ -1,5 +1,6 @@
 package com.schoolbus.schoolbustracking.activities;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -14,7 +15,6 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         if (findViewById(R.id.login_container) != null) {
-
             if (savedInstanceState == null) {
                 LoginDefaultFragment loginDefaultFragment = new LoginDefaultFragment();
                 loginDefaultFragment.setArguments(getIntent().getExtras());
@@ -23,7 +23,6 @@ public class LoginActivity extends AppCompatActivity {
                         .add(R.id.login_container, loginDefaultFragment).commit();
             }
         }
-
     }
 
 }
