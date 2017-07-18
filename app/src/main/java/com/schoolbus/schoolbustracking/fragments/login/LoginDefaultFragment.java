@@ -17,8 +17,8 @@ import com.schoolbus.schoolbustracking.R;
 
 public class LoginDefaultFragment extends Fragment {
 
-    ViewGroup viewGroup;
-    Button toLogin, toSignup;
+    private ViewGroup viewGroup;
+    private Button toLogin, toSignup;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

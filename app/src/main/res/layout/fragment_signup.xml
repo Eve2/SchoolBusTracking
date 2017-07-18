@@ -11,7 +11,7 @@
         android:layout_height="100dp"
         android:layout_gravity="center_horizontal"
         android:layout_margin="20dp"
-        android:src="@drawable/logo" />
+        android:src="@drawable/logo1" />
 
     <EditText
         android:id="@+id/name"
