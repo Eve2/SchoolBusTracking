@@ -64,8 +64,8 @@ public class SigninFragment extends Fragment {
 
     public boolean verified() {
 
-        phone = ((EditText)viewGroup.findViewById(R.id.login_phone)).getText().toString().trim();
-        password = ((EditText)viewGroup.findViewById(R.id.login_password)).getText().toString().trim();
+        phone = ((EditText) viewGroup.findViewById(R.id.login_phone)).getText().toString().trim();
+        password = ((EditText) viewGroup.findViewById(R.id.login_password)).getText().toString().trim();
 
         if (phone == null || phone.length() == 0 || password == null || password.length() == 0) {
             return false;
@@ -79,7 +79,7 @@ public class SigninFragment extends Fragment {
         StringRequest stringRequest = new StringRequest(Request.Method.POST, stringBuilder.toString(), new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                if(response.contains("success")) {
+                if (response.contains("success")) {
                     jumpToHome();
                 } else {
                     Toast.makeText(getActivity(), "Phone and password not match", Toast.LENGTH_LONG).show();

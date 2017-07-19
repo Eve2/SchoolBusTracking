@@ -34,15 +34,15 @@ import static com.schoolbus.schoolbustracking.R.id.my_map;
  */
 
 public class LocationFragment extends Fragment implements OnMapReadyCallback {
-    private static GoogleMap map;
+    private GoogleMap map;
     private LocationManager locationManager;
     private LocationListener locationListener;
-    private static LatLng bus=new LatLng(12.916514,77.609664);
+    private LatLng bus = new LatLng(12.916514, 77.609664);
     LatLng start = new LatLng(12.916514, 77.619664);
     LatLng end = new LatLng(12.916514, 77.604332);
-    LatLng CityBank=new LatLng(12.91697,77.614085);
-    LatLng Lara=new LatLng(12.916274,77.611081);
-    LatLng BTM=new LatLng(12.916535,77.606800);
+    LatLng CityBank = new LatLng(12.91697, 77.614085);
+    LatLng Lara = new LatLng(12.916274, 77.611081);
+    LatLng BTM = new LatLng(12.916535, 77.606800);
 
     @Nullable
     @Override
@@ -52,7 +52,7 @@ public class LocationFragment extends Fragment implements OnMapReadyCallback {
         SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager()
                 .findFragmentById(my_map);
         mapFragment.getMapAsync(this);
-       // googleMap=(MapFragment)((SupportMapFragment) getChildFragmentManager().findFragmentById(my_map)).getMapAsync(this);
+        // googleMap=(MapFragment)((SupportMapFragment) getChildFragmentManager().findFragmentById(my_map)).getMapAsync(this);
         locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
         locationListener = new LocationListener() {
             @Override
@@ -64,16 +64,14 @@ public class LocationFragment extends Fragment implements OnMapReadyCallback {
                 map.addMarker(new MarkerOptions().position(bus)
                         .title("Bus")).setIcon(BitmapDescriptorFactory.fromResource(R.drawable.bus_24));
                 map.addMarker(new MarkerOptions().position(start)
-                        .title("Start Stop")) ;
-               map.addMarker(new MarkerOptions().position(start)
-                        .title("Start Stop")) ;
+                        .title("Start Stop"));
                 map.addMarker(new MarkerOptions().position(end)
-                        .title("End Stop")).setIcon(BitmapDescriptorFactory.fromResource(R.drawable.school)); ;
+                        .title("End Stop")).setIcon(BitmapDescriptorFactory.fromResource(R.drawable.school));
                 map.addMarker(new MarkerOptions().position(CityBank)
-                        .title("City Bank Stop")) ;
+                        .title("City Bank Stop"));
                 map.addMarker(new MarkerOptions().position(Lara)
                         .title("Lara Technologies"));
-               map.addMarker(new MarkerOptions().position(BTM)
+                map.addMarker(new MarkerOptions().position(BTM)
                         .title("BTM Water Tank"));
                 // add route to the map
                 Polyline polyline1 = map.addPolyline(new PolylineOptions()
@@ -98,6 +96,7 @@ public class LocationFragment extends Fragment implements OnMapReadyCallback {
 
             }
         };
+
         if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getContext(),
                 Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
 
@@ -116,19 +115,17 @@ public class LocationFragment extends Fragment implements OnMapReadyCallback {
     @Override
     public void onMapReady(GoogleMap googleMap) {
         // bus stops
-        map=googleMap;
+        map = googleMap;
 
         // add markers to the map
         googleMap.addMarker(new MarkerOptions().position(bus)
                 .title("Bus")).setIcon(BitmapDescriptorFactory.fromResource(R.drawable.bus_24));
         googleMap.addMarker(new MarkerOptions().position(start)
-                .title("Start Stop")) ;
-        googleMap.addMarker(new MarkerOptions().position(start)
-                .title("Start Stop")) ;
+                .title("Start Stop"));
         googleMap.addMarker(new MarkerOptions().position(end)
-                .title("End Stop")).setIcon(BitmapDescriptorFactory.fromResource(R.drawable.school)); ;
+                .title("End Stop")).setIcon(BitmapDescriptorFactory.fromResource(R.drawable.school));
         googleMap.addMarker(new MarkerOptions().position(CityBank)
-                .title("City Bank Stop")) ;
+                .title("City Bank Stop"));
         googleMap.addMarker(new MarkerOptions().position(Lara)
                 .title("Lara Technologies"));
         googleMap.addMarker(new MarkerOptions().position(BTM)

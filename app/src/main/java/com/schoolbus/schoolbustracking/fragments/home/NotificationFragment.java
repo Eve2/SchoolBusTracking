@@ -21,7 +21,7 @@ import com.schoolbus.schoolbustracking.services.MyFirebaseMessagingService;
  * Created by Eve on 7/16/17.
  */
 
-public class NotificationFragment extends Fragment{
+public class NotificationFragment extends Fragment {
     ViewGroup viewGroup;
     Button subscribeButton, logTokenButton, notificationButton;
 
@@ -32,7 +32,7 @@ public class NotificationFragment extends Fragment{
         notificationButton = (Button) viewGroup.findViewById(R.id.notificationButton);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            String channelId  = getString(R.string.default_notification_channel_id);
+            String channelId = getString(R.string.default_notification_channel_id);
             String channelName = getString(R.string.default_notification_channel_name);
             NotificationManager notificationManager =
                     getActivity().getSystemService(NotificationManager.class);

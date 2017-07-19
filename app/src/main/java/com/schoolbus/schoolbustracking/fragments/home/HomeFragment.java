@@ -33,7 +33,7 @@ public class HomeFragment extends Fragment {
         linearLayout1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.home_container,new LocationFragment()).addToBackStack(null).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.home_container, new LocationFragment()).addToBackStack(null).commit();
             }
         });
 
@@ -54,14 +54,14 @@ public class HomeFragment extends Fragment {
         linearLayout4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.home_container,new SettingFragment()).addToBackStack(null).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.home_container, new SettingFragment()).addToBackStack(null).commit();
             }
         });
 
         linearLayout5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.home_container,new HelpFragment()).addToBackStack(null).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.home_container, new HelpFragment()).addToBackStack(null).commit();
             }
         });
 

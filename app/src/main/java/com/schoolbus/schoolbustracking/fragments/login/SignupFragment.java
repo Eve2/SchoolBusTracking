@@ -61,13 +61,13 @@ public class SignupFragment extends Fragment {
 
     private boolean verified() {
 
-        name = ((EditText)viewGroup.findViewById(R.id.name)).getText().toString().trim();
-        password = ((EditText)viewGroup.findViewById(R.id.password)).getText().toString().trim();
-        mobile = ((EditText)viewGroup.findViewById(R.id.mobile)).getText().toString().trim();
-        fatherName = ((EditText)viewGroup.findViewById(R.id.father_name)).getText().toString().trim();
-        driverLicense = ((EditText)viewGroup.findViewById(R.id.driver_license)).getText().toString().trim();
-        address = ((EditText)viewGroup.findViewById(R.id.address)).getText().toString().trim();
-        gender = ((EditText)viewGroup.findViewById(R.id.gender)).getText().toString().trim();
+        name = ((EditText) viewGroup.findViewById(R.id.name)).getText().toString().trim();
+        password = ((EditText) viewGroup.findViewById(R.id.password)).getText().toString().trim();
+        mobile = ((EditText) viewGroup.findViewById(R.id.mobile)).getText().toString().trim();
+        fatherName = ((EditText) viewGroup.findViewById(R.id.father_name)).getText().toString().trim();
+        driverLicense = ((EditText) viewGroup.findViewById(R.id.driver_license)).getText().toString().trim();
+        address = ((EditText) viewGroup.findViewById(R.id.address)).getText().toString().trim();
+        gender = ((EditText) viewGroup.findViewById(R.id.gender)).getText().toString().trim();
 
         if (name == null || password == null || mobile == null || fatherName == null ||
                 driverLicense == null || address == null || gender == null || name.length() == 0 ||
@@ -86,7 +86,7 @@ public class SignupFragment extends Fragment {
         StringRequest stringRequest = new StringRequest(Request.Method.POST, stringBuilder.toString(), new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                if(response.contains("success")) {
+                if (response.contains("success")) {
                     jumpToLogin();
                     Toast.makeText(getActivity(), "Register Succeed!", Toast.LENGTH_LONG).show();
                 } else {

@@ -10,6 +10,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+
 import com.schoolbus.schoolbustracking.R;
 import com.schoolbus.schoolbustracking.fragments.HelpFragment;
 import com.schoolbus.schoolbustracking.fragments.SettingFragment;
@@ -23,6 +24,7 @@ public class HomeActivity extends AppCompatActivity {
     private NavigationView mNavigationView;
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle toggle;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,13 +41,14 @@ public class HomeActivity extends AppCompatActivity {
             }
         }
     }
+
     //init view
-    private void initViews()
-    {
+    private void initViews() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         mNavigationView = (NavigationView) findViewById(R.id.nav_view);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
     }
+
     //setActionBar
     private void setActionBar() {
         setSupportActionBar(toolbar);
@@ -61,6 +64,7 @@ public class HomeActivity extends AppCompatActivity {
         mDrawerLayout.addDrawerListener(toggle);
         toggle.syncState();
     }
+
     // set navigation drawer items click listener
     private void setListener() {
         mNavigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -77,18 +81,18 @@ public class HomeActivity extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction().replace(R.id.home_container, new NotificationFragment()).addToBackStack(null).commit();
                         break;
                     case R.id.location:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.home_container,new LocationFragment()).addToBackStack(null).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.home_container, new LocationFragment()).addToBackStack(null).commit();
                         break;
                     case R.id.help:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.home_container,new HelpFragment()).addToBackStack(null).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.home_container, new HelpFragment()).addToBackStack(null).commit();
                         break;
                     case R.id.logout:
                         Intent it = new Intent(HomeActivity.this, LoginActivity.class);
                         getApplicationContext().getSharedPreferences("BusSharedPreference", Context.MODE_PRIVATE).edit().clear().commit();
                         startActivity(it);
                         break;
-                    case  R.id.setting:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.home_container,new SettingFragment()).addToBackStack(null).commit();
+                    case R.id.setting:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.home_container, new SettingFragment()).addToBackStack(null).commit();
                         break;
 
                 }

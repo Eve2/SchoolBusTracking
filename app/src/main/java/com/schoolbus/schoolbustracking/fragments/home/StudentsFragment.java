@@ -63,22 +63,22 @@ public class StudentsFragment extends Fragment {
             public void onResponse(String response) {
 
                 try {
- //                   if (response.contains("ID")) {
+                    //                   if (response.contains("ID")) {
 
-                        JSONObject jsonObject = new JSONObject(response);
-                        JSONArray jsonArray = jsonObject.getJSONArray("Stops");
+                    JSONObject jsonObject = new JSONObject(response);
+                    JSONArray jsonArray = jsonObject.getJSONArray("Stops");
 
-                        for (int i = 0; i < jsonArray.length(); i++) {
+                    for (int i = 0; i < jsonArray.length(); i++) {
 
-                            JSONObject infoObj = jsonArray.getJSONObject(i);
-                            StudentsInfo info = new StudentsInfo(infoObj.getString("StudentID"), infoObj.getString("StudentName"), infoObj.getString("StudentPhoto"));
-                            studentsInfos.add(info);
-                        }
+                        JSONObject infoObj = jsonArray.getJSONObject(i);
+                        StudentsInfo info = new StudentsInfo(infoObj.getString("StudentID"), infoObj.getString("StudentName"), infoObj.getString("StudentPhoto"));
+                        studentsInfos.add(info);
+                    }
 
-                        StudentsAdapter adapter = new StudentsAdapter(studentsInfos, getContext());
-                        mRecyclerView.setAdapter(adapter);
- //                       mRecyclerView.setItemAnimator(new DefaultItemAnimator());
- //                   }
+                    StudentsAdapter adapter = new StudentsAdapter(studentsInfos, getContext());
+                    mRecyclerView.setAdapter(adapter);
+                    //                       mRecyclerView.setItemAnimator(new DefaultItemAnimator());
+                    //                   }
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

@@ -17,14 +17,15 @@ import com.schoolbus.schoolbustracking.R;
 
 public class SettingFragment extends Fragment {
     private ListView listView;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.fragment_setting,container,false);
-        listView=view.findViewById(R.id.listView);
-        ArrayAdapter<String> ad = new ArrayAdapter<String>(getContext(),R.layout.listview,getResources().getStringArray(R.array.setting));
+        View view = inflater.inflate(R.layout.fragment_setting, container, false);
+        listView = view.findViewById(R.id.listView);
+        ArrayAdapter<String> ad = new ArrayAdapter<String>(getContext(), R.layout.listview, getResources().getStringArray(R.array.setting));
         listView.setAdapter(ad);
-       // listView.setAdapter(new ArrayAdapter<String>(,R.layout.fragment_setting,android.R.id.text1,getResources().getStringArray(R.array.setting)));
+        // listView.setAdapter(new ArrayAdapter<String>(,R.layout.fragment_setting,android.R.id.text1,getResources().getStringArray(R.array.setting)));
         return view;
     }
 }
